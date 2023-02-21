@@ -1,0 +1,9 @@
+<%= @task.details %>
+
+<% if @task.completed == true %>
+<i class="fa-regular fa-square-check"></i><p>This task is completed</p>
+<% else %>
+<i class="fa-regular fa-square"></i><p>This task is not completed</p>
+<% end %>
+
+<%= link_to "Edit a task", tasks_new_path %>
