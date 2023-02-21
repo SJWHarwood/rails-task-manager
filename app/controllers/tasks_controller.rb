@@ -29,6 +29,12 @@ class TasksController < ApplicationController
     redirect_to root_path
   end
 
+  def destory
+    @tasks = Tasks.find(params[:id])
+    @tasks.destroy
+    redirect_to root_path, status: :see_other
+  end
+
   private
 
   def task_params
